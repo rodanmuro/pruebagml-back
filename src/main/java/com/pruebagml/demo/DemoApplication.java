@@ -29,9 +29,14 @@ public class DemoApplication implements CommandLineRunner {
 
 
 		for (int i = 0; i < 5; i++) {
+			String nombre = "nombre"+i;
+			String apellido = "apellido"+i;
+
+			String sharedKey = nombre.substring(0,1)+apellido;
+
 			cliente = Cliente.builder()
-					.sharedKey("cliente"+i)
-					.businessId("nombre"+i+" apellido"+i)
+					.sharedKey(sharedKey)
+					.businessId(nombre+" "+apellido)
 					.email("correo"+i+"@correo.com")
 					.phone(3156332247L+i)
 					.startDate(LocalDate.now())

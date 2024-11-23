@@ -10,6 +10,6 @@ public interface ClienteService {
 
     public Cliente guardarCliente(Cliente cliente);
 
-    public Cliente getClienteBySharedKey(String sharedKey);
+    public List<Cliente> getClienteBySharedKey(String sharedKey);
 
 }

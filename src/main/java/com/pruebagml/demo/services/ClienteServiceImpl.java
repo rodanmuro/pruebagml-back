@@ -8,18 +8,17 @@ import com.pruebagml.demo.entities.Cliente;
 import com.pruebagml.demo.repositories.ClienteRepository;
 
 @Service
-public class ClienteServiceImpl implements ClienteService{
-
+public class ClienteServiceImpl implements ClienteService {
 
     private final ClienteRepository clienteRepository;
 
-    public ClienteServiceImpl(ClienteRepository clienteRepository){
+    public ClienteServiceImpl(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
 
     @Override
     public List<Cliente> obtenerClientes() {
-        List<Cliente> clientes =  clienteRepository.findAll();
+        List<Cliente> clientes = clienteRepository.findAll();
         return clientes;
     }
 
@@ -30,9 +29,9 @@ public class ClienteServiceImpl implements ClienteService{
     }
 
     @Override
-    public Cliente getClienteBySharedKey(String sharedKey) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getClienteBySharedKey'");
+    public List<Cliente> getClienteBySharedKey(String sharedKey) {
+        List<Cliente> clientes = clienteRepository.findBySharedKeyContaining(sharedKey);
+        return clientes;
     }
-    
+
 }
