@@ -1,11 +1,11 @@
 # PruebagmlBack
 
-Este backend ha sido desarrollado en Spring Boot 3.
+Este backend ha sido desarrollado en Spring Boot 3, como resolución a la prueba técnica de ingreso a GML Software
 
 Tiene como dependencias:
-Spring Boot Web
-Spring JPA
-Spring H2
+Spring Boot Web,
+Spring JPA,
+Spring H2,
 Spring DevTools
 
 Versión de Java 17
