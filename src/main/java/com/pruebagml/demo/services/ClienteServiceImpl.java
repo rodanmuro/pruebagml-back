@@ -19,8 +19,8 @@ public class ClienteServiceImpl implements ClienteService{
 
     @Override
     public List<Cliente> obtenerClientes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerClientes'");
+        List<Cliente> clientes =  clienteRepository.findAll();
+        return clientes;
     }
 
     @Override

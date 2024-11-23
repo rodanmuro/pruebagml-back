@@ -1,7 +1,10 @@
 package com.pruebagml.demo.controllers;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +22,12 @@ public class ClienteController {
 
     public ClienteController(ClienteService clienteService) {
         this.clienteService = clienteService;
+    }
+
+    @GetMapping("/cliente")
+    public ResponseEntity<List<Cliente>> obtenerClientes(){
+        List<Cliente> clientes = clienteService.obtenerClientes();
+        return ResponseEntity.ok(clientes);
     }
 
     @PostMapping("/cliente")
