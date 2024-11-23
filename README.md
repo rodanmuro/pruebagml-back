@@ -12,4 +12,6 @@ Versión de Java 17
 
 La base de datos que se ha utilizado es una base de datos en memoria H2
 
+Corre por defecto en ela url http://localhost:8080
+
 Se recomienda inicializar primero esta backend, antes de iniciar el frontend, con el fin de que el front pueda cargar la data generada en la base de datos
